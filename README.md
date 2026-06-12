@@ -1,71 +1,129 @@
-<a href="https://chatbot.ai-sdk.dev/demo">
-  <img alt="Chatbot" src="app/(chat)/opengraph-image.png">
-  <h1 align="center">Chatbot</h1>
-</a>
+# 🚀 ModelOps Studio
 
-<p align="center">
-    Chatbot (formerly AI Chatbot) is a free, open-source template built with Next.js and the AI SDK that helps you quickly build powerful chatbot applications.
-</p>
+A modern AI infrastructure dashboard built with Next.js, TypeScript, and Tailwind CSS to monitor, manage, and interact with multiple AI models through a unified developer-friendly interface.
 
-<p align="center">
-  <a href="https://chatbot.ai-sdk.dev/docs"><strong>Read Docs</strong></a> ·
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a>
-</p>
-<br/>
+---
 
-## Features
+## 🧠 Overview
 
-- [Next.js](https://nextjs.org) App Router
-  - Advanced routing for seamless navigation and performance
-  - React Server Components (RSCs) and Server Actions for server-side rendering and increased performance
-- [AI SDK](https://ai-sdk.dev/docs/introduction)
-  - Unified API for generating text, structured objects, and tool calls with LLMs
-  - Hooks for building dynamic chat and generative user interfaces
-  - Supports OpenAI, Anthropic, Google, xAI, and other model providers via AI Gateway
-- [shadcn/ui](https://ui.shadcn.com)
-  - Styling with [Tailwind CSS](https://tailwindcss.com)
-  - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
-- Data Persistence
-  - [Neon Serverless Postgres](https://vercel.com/marketplace/neon) for saving chat history and user data
-  - [Vercel Blob](https://vercel.com/storage/blob) for efficient file storage
-- [Auth.js](https://authjs.dev)
-  - Simple and secure authentication
+ModelOps Studio is a frontend-focused platform designed to simulate real-world AI infrastructure tools used by companies. It provides a centralized UI to interact with LLMs, monitor performance, and visualize system metrics — similar to production-grade AI platforms.
 
-## Model Providers
+This project demonstrates strong frontend engineering skills, UI/UX design, and integration with APIs in a scalable architecture.
 
-This template uses the [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) to access multiple AI models through a unified interface. Models are configured in `lib/ai/models.ts` with per-model provider routing. Included models: Mistral, Moonshot, DeepSeek, OpenAI, and xAI.
+---
 
-### AI Gateway Authentication
+## ✨ Features
 
-**For Vercel deployments**: Authentication is handled automatically via OIDC tokens.
+### 💬 AI Chat Interface
 
-**For non-Vercel deployments**: You need to provide an AI Gateway API key by setting the `AI_GATEWAY_API_KEY` environment variable in your `.env.local` file.
+* Chat with multiple AI models (mock or real APIs)
+* Model switching (e.g., GPT, Gemini, Claude)
+* Real-time response rendering
 
-With the [AI SDK](https://ai-sdk.dev/docs/introduction), you can also switch to direct LLM providers like [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://ai-sdk.dev/providers/ai-sdk-providers) with just a few lines of code.
+### 📊 Dashboard & Analytics
 
-## Deploy Your Own
+* Visualize:
 
-You can deploy your own version of Chatbot to Vercel with one click:
+  * Response latency
+  * API usage
+  * Cost metrics
+* Interactive charts and graphs
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/templates/next.js/chatbot)
+### 📜 Logs & Monitoring
 
-## Running locally
+* View request logs with:
 
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Chatbot. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/projects/environment-variables) for this, but a `.env` file is all that is necessary.
+  * Prompt
+  * Response time
+  * Status
+* Search, filter, and sort functionality
 
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control access to your various AI and authentication provider accounts.
+### ⚙️ Settings Panel
 
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
+* Configure model parameters
+* Manage API keys (UI-based)
+* Customize system behavior
 
-```bash
-pnpm install
-pnpm db:migrate # Setup database or apply latest database changes
-pnpm dev
+### 🌙 Modern UI/UX
+
+* Fully responsive design
+* Dark/Light mode support
+* Clean and intuitive layout
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend Framework:** Next.js
+* **Language:** TypeScript
+* **UI Library:** React
+* **Styling:** Tailwind CSS
+* **Charts:** Recharts / Chart.js
+* **State Management:** React Hooks / Context API
+* **API Integration:** REST APIs
+
+---
+
+## 📂 Project Structure
+
+```
+/app
+/components
+  /ui
+  /dashboard
+  /chat
+  /logs
+/lib
+/hooks
+/types
+/public
 ```
 
-Your app template should now be running on [localhost:3000](http://localhost:3000).
+---
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run the development server
+
+```
+npm run dev
+```
+
+### 4. Open in browser
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📸 Screenshots (Add later)
+
+* Dashboard view
+* Chat interface
+* Logs table
+
+---
+
+## 🎯 Learning Outcomes
+
+* Built scalable frontend architecture using Next.js
+* Designed developer-centric UI for complex systems
+* Integrated APIs and handled real-time data
+* Implemented responsive and accessible UI components
+* Improved performance and state management strategies
+
+---
+
+## 📌 Future Improvements
+
+* Real API integration (OpenAI, Gemini, etc.)
+* Authentication & user roles
+* Backend integration for persistent logs
+* Advanced analytics & alerting system
+
+---
